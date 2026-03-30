@@ -214,6 +214,13 @@
 #pricing {
     display: flex;
 }
+/* PORTFOLIO GRID */
+.portfolio img:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 500px;
+}
+
 /* Media Queries */
 
 @media screen and (max-width: 480px) {
