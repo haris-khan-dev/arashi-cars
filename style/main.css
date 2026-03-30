@@ -1,0 +1,236 @@
+
+/* HERO SECTION  */
+
+.hero{
+    color: var(--fontColor); 
+    height: 75vh; 
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.heroContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0 1rem;
+    animation: fade-up 650ms 100ms backwards;
+}
+
+.heroContainer h1{
+    font-size: 6rem;
+    color: #ffff;
+    text-align: center;
+    line-height: 85%;
+    letter-spacing: -0.05rem;
+    text-shadow: 0px 8px 10px #000000;
+}
+
+.heroContainer h3{
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 85%;
+    letter-spacing: -0.05rem;
+    text-shadow: 0px 8px 10px #000000;
+
+}
+
+.heroContainer p{
+    text-align: center;
+    max-width: 70%;
+    font-weight: 300;
+
+}
+
+.heroContainer a{
+    margin: 0px auto;
+    padding: 7px 20px;
+    background-color: transparent;
+    border-radius: 0.5rem;
+    border: 2px solid var(--mainColor);
+    box-shadow: inset 0 0 var(--mainColor);
+    transition-duration: 0.13s;
+    color: var(--fontColor);
+    animation: fade-up 650ms 250ms backwards;
+}
+
+.hero a:hover{
+    box-shadow: inset 0px 0 10px 30px var(--mainColor);
+    color: var(--fontColor);
+}
+
+/* FEATURED SECTION */
+
+.featured{
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 90%;
+    animation: fade-in 1200ms 500ms backwards;
+}
+
+.featured content{
+    margin: 12px 10px;
+    border-radius: 8px;
+    padding: 10px;
+    border: 3px solid var(--mainColor);
+    transition: .3s;
+}
+.featured div.thumbnail{
+    width: 310px;
+    aspect-ratio: 16/9;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.featured hr{
+    background: var(--mainColor);
+    border: none;
+    height: 1px;
+}
+.featured h6{
+    margin: 10px 0;
+    font-size: 13px;
+    color: #000;
+}
+
+/* ANIMATION */
+
+@keyframes fade-up {
+    0%{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/* TESTIMONIALS  */
+.testimonials{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    align-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-right: 0;
+/*    background-color: #e2eeff;*/
+    padding-bottom: 50px;
+    padding-top: 20px;
+}
+.testimonials h4{
+    width: 90%;
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--mainColor);
+    text-align: center;
+}
+.testimonials content{
+    margin: 10px 15px;
+    border-radius: 5px;
+    border-radius: 45px 45px 10px;
+    /* box-shadow: 0px 4px 6px -1px #825e01; */
+    padding: 35px 15px 30px 15px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    background-color: #1B2934;
+    align-items: center;
+    min-width: 170px;
+    transition-duration: 0.14s;
+    flex-wrap: wrap;
+    max-width: 225px;
+    /* border: 3px solid; */
+}
+.testimonials content:hover{
+    /* transform: scale(1.02);sec */
+    transform: translateY(-15px) rotateZ(-5deg);
+    box-shadow: -5px 18px 19px -2px #030303;
+}
+.testimonials div.icon{
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    background-image: url(../images/dummy.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    margin: 5px 7px 5px 20px;
+}
+.testimonials h6{
+    margin: 10px 0;
+    font-size: 16px;
+    text-align: center;
+    color: var(--mainColor);
+}
+.testimonials p{
+    font-size: 14px;
+    text-align: center;
+    color: var(--fontColorDark);
+    margin-bottom: 15px;
+    padding-left: 10px;
+    width: 100%;
+}
+
+#orderHeading{
+    margin-top: 10%;
+    font-size: 55px;
+    color: var(--fontColorDark);
+    text-align: center;
+    width: 100vw;
+}
+#orderHeading a{
+    color: var(--mainColor);
+    background: none;
+    padding: 0;
+}
+
+#orderHeading a:hover{  
+    text-decoration: underline;
+}
+
+#pricing {
+    display: flex;
+}
+/* Media Queries */
+
+@media screen and (max-width: 480px) {
+
+section{margin: 10px 30px;}
+.hero{margin-top: 15vh}
+.hero h1{
+    font-size: 60px;
+    margin-top: 2vh;
+    margin-bottom: 10%;
+}
+.hero a{
+    font-size: 15px;
+}
+#sec3{
+    margin: 20px 0;
+}
+#orderHeading{font-size: 48px;}
+}
+

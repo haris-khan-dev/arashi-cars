@@ -1,0 +1,31 @@
+footer{
+	min-height: 50px;
+	width: 100%;
+	background-color: var(--bgColor);
+	margin-top: 80px;
+	color: white;
+	text-align: center;
+	padding: 65px 0 50px 0;
+	display: flex;
+	flex-direction: column;
+}
+footer content{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    color: var(--fontColorDark);
+}
+@media screen and (max-width: 480px) {
+footer content{
+	    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+}
