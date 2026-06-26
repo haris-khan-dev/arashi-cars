@@ -1,74 +1,61 @@
-nav{
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    height: 100%;
-    width: 100%;
-    max-width: 80rem;
-    position: sticky;
-    top: 0;
-    z-index: 50;
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem;
 }
-.navContainer{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #1f293726;
-    padding: 1.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 1rem;
-    backdrop-filter: blur(1rem);
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+  border-radius: 99px;
+  background: rgba(3, 3, 3, 0.85);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
+
 .navLinks {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    font-size: 1rem;
-    font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 99px;
+  border: 1px solid var(--border);
 }
 
 .navLinks a {
-    color: var(--fontColor);
-    transition: color 0.2s ease;
+  position: relative;
+  padding: 0.45rem 1.1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  border-radius: 99px;
+  transition: color 0.2s ease, background 0.2s ease;
 }
 
-.navLinks a:hover,
+.navLinks a:hover {
+  color: var(--text);
+}
+
 .navLinks a.active {
-    color: #0078ff;
+  color: #fff;
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.3), rgba(69, 10, 10, 0.25));
+  border: 1px solid rgba(220, 38, 38, 0.35);
 }
 
-.logo{
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+@media screen and (max-width: 480px) {
+  nav { padding: 1rem; }
+
+  .navLinks a {
+    padding: 0.4rem 0.85rem;
+    font-size: 0.8rem;
+  }
 }
-
-#pfp{
-    height: 2.5rem ;
-    width: 2.5rem ;
-    border-radius: 50%;
-
-}
-
-#pfpText{
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-/* Media queries */
-
-/* @media screen and (max-width: 480px) {
-nav{
-	background-position-x: 5px;
-	background-size: 140px;
-    padding-right: 0px;
-}
-.navLinks a{
-	margin: 0 0;
-	font-size: 15px;
-}
-} */
-

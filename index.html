@@ -8,20 +8,17 @@
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="style/footer.css">
-    <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
-    <title>Portfolio</title>
+    <title>Arashi — Portfolio</title>
 </head>
 
 <body>
     <nav>
         <div class="navContainer">
-            <a href="index.html" class="logo">
-                <span id="pfpText">Arashi</span>
-            </a>
+            <h3>Arashi</h3>
             <div class="navLinks">
                 <a href="index.html" class="active">Portfolio</a>
                 <a href="contact.html">Contact</a>
@@ -29,54 +26,87 @@
         </div>
     </nav>
 
-    <!-- HERO -->
-    <section class="hero" style="text-align: center; padding: 60px 20px 20px;">
+    <section class="hero">
         <div class="heroContainer">
-            <h1><span class="highlight">Portfolio</span></h1>
-            <p>A collection of my car designs and artworks.</p>
+            <span class="hero-badge">Automotive Design</span>
+            <h1><span class="gradient-text">Car Designs</span><br>& Artworks</h1>
+            <p>My featured work for <strong>@survivor</strong> — custom car designs built for his Nitrotype projects.</p>
+            <div class="hero-actions">
+                <a href="#gallery" class="btn">View Gallery</a>
+                <a href="contact.html" class="btn btn-outline">Get in Touch</a>
+            </div>
         </div>
     </section>
-    <!-- PORTFOLIO GRID -->
-    <section class="portfolio" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; padding: 2rem; max-width: 1200px; margin: 0 auto;">
-        <img src="assets/image3.png" alt="Car Design" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px;">
-        <img src="assets/car 2.webp" alt="Car Design" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px; transform: rotate(180deg);">
-        <img src="assets/car 6 (1).webp" alt="Car Design" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px; transform: rotate(180deg);">
-        <img src="assets/car 6.webp" alt="Car Design" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px; transform: rotate(180deg);">
-        <img src="assets/car10.webp" alt="Car Design" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px;">
-        <img src="assets/car12.webp" alt="Car Design" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px; ">
-        <img src="assets/car13.webp" alt="Car Design" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px;">
-        <img src="assets/car7 (2).webp" alt="Car Design" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px; transform: rotate(180deg);">
-        <img src="assets/car8 (2).webp" alt="Car Design" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px;">
-        <img src="assets/car9.webp" alt="Car Design" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px;">
-        <img src="assets/delorean0.webp" alt="Car Design" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px;">
-        <img src="assets/deloreon1.0.webp" alt="Car Design" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px;">
-        <img src="assets/deloreon1.webp" alt="Car Design" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px;">
-        <img src="assets/deloreon2.webp" alt="Car Design" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px;">
-        <img src="assets/foranimation.webp" alt="Car Design" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px;">
-        <img src="assets/honda air.webp" alt="Car Design" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px;">
+
+    <section class="portfolio-section" id="gallery">
+        <div class="section-header">
+            <span class="section-label">Gallery</span>
+            <h2><span class="gradient-text">Selected Works</span></h2>
+            <p>Concept renders and design explorations</p>
+        </div>
+        <div class="portfolio">
+            <img src="assets/image3.png" alt="Car Design">
+            <img src="assets/car 2.webp" alt="Car Design" class="flip">
+            <img src="assets/car 6 (1).webp" alt="Car Design" class="flip">
+            <img src="assets/car13.webp" alt="Car Design">
+            <img src="assets/deloreon2.webp" alt="Car Design">
+            <img src="assets/car10.webp" alt="Car Design">
+            <img src="assets/car12.webp" alt="Car Design">
+            <img src="assets/deloreon1.webp" alt="Car Design">
+            <img src="assets/car8 (2).webp" alt="Car Design">
+            <img src="assets/car7 (2).webp" alt="Car Design" class="flip">
+            <img src="assets/car 6.webp" alt="Car Design" class="flip">
+            <img src="assets/car9.webp" alt="Car Design">
+            <img src="assets/delorean0.webp" alt="Car Design">
+            <img src="assets/foranimation.webp" alt="Car Design">
+            <img src="assets/deloreon1.0.webp" alt="Car Design">
+            <!-- <img src="assets/honda air.webp" alt="Car Design">  -->
+        </div>
     </section>
 
-    <!-- ANIMATIONS -->
-    <section class="animations">
-        <h2><span class="highlight">Animations</span></h2>
-        <div class="animations-grid">
-            <div class="video-card">
-                <video src="assets/deloreon1.mp4" loop muted preload="metadata"
+    <section class="animations" id="animations">
+        <div class="section-header">
+            <span class="section-label">Motion</span>
+            <h2><span class="gradient-text">Animations</span></h2>
+            <p>Motion clips and animated car showcases</p>
+        </div>
+        <div class="animations-layout">
+            <div class="video-card video-card--featured">
+                <span class="video-label">Featured</span>
+                <video src="assets/lambo.mp4" loop muted preload="metadata"
                     onmouseenter="this.play()" onmouseleave="this.pause(); this.currentTime=0;">
                 </video>
+                <span class="play-hint">▶ Hover to play</span>
             </div>
-            <div class="video-card">
-                <video src="assets/deloreon1.1.mp4" loop muted preload="metadata"
-                    onmouseenter="this.play()" onmouseleave="this.pause(); this.currentTime=0;">
-                </video>
+            <div class="animations-grid">
+                <div class="video-card">
+                    <video src="assets/deloreon1.mp4" loop muted preload="metadata"
+                        onmouseenter="this.play()" onmouseleave="this.pause(); this.currentTime=0;">
+                    </video>
+                    <span class="play-hint">▶ Hover to play</span>
+                </div>
+                <div class="video-card">
+                    <video src="assets/deloreon1.1.mp4" loop muted preload="metadata"
+                        onmouseenter="this.play()" onmouseleave="this.pause(); this.currentTime=0;">
+                    </video>
+                    <span class="play-hint">▶ Hover to play</span>
+                </div>
+                <div class="video-card">
+                    <video src="assets/Cartrans.mp4" loop muted preload="metadata"
+                        onmouseenter="this.play()" onmouseleave="this.pause(); this.currentTime=0;">
+                    </video>
+                    <span class="play-hint">▶ Hover to play</span>
+                </div>
             </div>
         </div>
     </section>
 
     <footer>
         <content>
-            <p>&copy; 2026 Arashi. All rights reserved.</p>
+            <span class="footer-brand">Arashi</span>
+            <p>&copy; 2026 All rights reserved.</p>
         </content>
     </footer>
 </body>
+
 </html>
