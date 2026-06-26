@@ -30,6 +30,16 @@ nav{
     font-weight: 500;
 }
 
+.navLinks a {
+    color: var(--fontColor);
+    transition: color 0.2s ease;
+}
+
+.navLinks a:hover,
+.navLinks a.active {
+    color: #0078ff;
+}
+
 .logo{
     display: flex;
     align-items: center;
