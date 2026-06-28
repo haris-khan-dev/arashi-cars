@@ -219,6 +219,12 @@
   opacity: 0;
 }
 
+@media (hover: none) {
+  .video-card:hover .play-hint {
+    opacity: 1 !important;
+  }
+}
+
 /* ── RESPONSIVE ── */
 
 @media screen and (max-width: 640px) {

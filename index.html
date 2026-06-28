@@ -107,6 +107,36 @@
             <p>&copy; 2026 All rights reserved.</p>
         </content>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const isTouch = window.matchMedia("(hover: none) and (pointer: coarse)").matches;
+          if (!isTouch) return;
+      
+          document.querySelectorAll(".play-hint").forEach((hint) => {
+            hint.textContent = "▶ Click to play";
+          });
+      
+          document.querySelectorAll(".video-card").forEach((card) => {
+            const video = card.querySelector("video");
+            const hint = card.querySelector(".play-hint");
+            if (!video) return;
+      
+            video.removeAttribute("onmouseenter");
+            video.removeAttribute("onmouseleave");
+      
+            card.addEventListener("click", () => {
+              if (video.paused) {
+                video.play();
+                if (hint) hint.textContent = "⏸ Click to pause";
+              } else {
+                video.pause();
+                video.currentTime = 0;
+                if (hint) hint.textContent = "▶ Click to play";
+              }
+            });
+          });
+        });
+      </script>
 </body>
 
 </html>
